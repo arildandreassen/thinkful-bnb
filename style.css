@@ -56,12 +56,20 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -72,6 +80,7 @@ header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+  cursor: pointer;
 }
 
 header nav ul li a:hover {
@@ -80,9 +89,24 @@ header nav ul li a:hover {
 }
 
 /* -------  Search Form ------- */
+
+#stay {
+  margin: 15px
+}
+
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+
+form div:nth-child() {
+  flex:1
 }
 
 form label {
@@ -104,6 +128,60 @@ form button {
   width: 100%;
 }
 
+/* -------  About ------- */
+
+#about {
+  display: flex;
+  flex-direction: column;
+}
+
+#about h2 {
+  align-self: center;
+  margin: 0;
+}
+
+#about div {
+  align-items: center;
+  margin: 20px;
+}
+
+#about div img {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#about div img:first-child {
+  margin-top: 0;
+}
+
+/* -------  Ideas ------- */
+
+.idea-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px 30px 15px;
+  font-weight: bold;
+}
+
+.idea-item img {
+  width: 100%;
+}
+
+/* -------  Host ------- */
+
+#host div {
+  margin: 15px;
+}
+
+#host div:first-child {
+  margin-bottom: 40px;
+}
+
+#host div img{
+  width: 100%;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -117,3 +195,103 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+
+  /* -------  Header ------- */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+  }
+
+  header .logo {
+    margin: 10px 20px;
+    font-size: 45px;
+  }
+
+  /* -------  Form ------- */
+  #stay form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .stay-item {
+    flex-direction: column;
+    margin:0 1%; 
+    align-self: center;
+    flex:1
+  }
+
+  .stay-item:first-child {
+    margin:0 1%
+  }
+
+  /* .stay-item input,.stay-item select {
+    margin-bottom: 0;
+    width:100%;
+  } */
+
+  form select,
+form input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+  /* -------  About ------- */
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about h2 {
+    margin-bottom: 1%;;
+  }
+
+  #about div {
+    display: flex;
+    flex-direction: row;
+    margin:0 ;
+  }
+
+  #about div img {
+    width: 20%;
+    max-height: 100%;
+    margin: 0 15px 0 0
+  }
+
+
+  /* -------  Ideas ------- */
+  #ideas > div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:0;
+  }
+
+  .idea-item {
+    width: 48%;
+    margin:0 1%;
+  }
+
+  /* -------  Host ------- */
+
+  #host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #host img {
+    width: 100%;
+  }
+
+  /* -------  Footer ------- */
+
+}
