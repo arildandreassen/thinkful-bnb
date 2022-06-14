@@ -37,20 +37,24 @@
         <!-- Create a form here -->
         <form>
           <div class="stay-item">
-            <label>Location</label>
-            <input type="text" placeholder="Search destination" />
+            <label for="location">Location</label>
+            <input
+              type="text"
+              placeholder="Search destination"
+              name="location"
+            />
           </div>
           <div class="stay-item">
-            <label>Arrive</label>
-            <input type="date" />
+            <label for="arrive">Arrive</label>
+            <input type="date" name="arrive" />
           </div>
           <div class="stay-item">
-            <label>Depart</label>
-            <input type="date" />
+            <label for="depart">Depart</label>
+            <input type="date" name="depart" />
           </div>
           <div class="stay-item">
-            <label>Type</label>
-            <select>
+            <label for="type">Type</label>
+            <select name="type">
               <option>Apartment</option>
               <option>Barn</option>
               <option>Castle</option>
