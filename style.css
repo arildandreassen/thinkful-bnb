@@ -116,7 +116,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 50%;
 }
 
 form button {
@@ -195,6 +195,18 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (max-width: 300px) {
+  .logo{
+    font-size: 40px;
+  }
+}
+
+@media all and (min-width:301px) and ( max-width: 400px)  {
+    .logo{
+      font-size: 60px;
+    }
+  }
 
 @media all and (min-width: 480px) {
 
@@ -295,3 +307,5 @@ form input {
   /* -------  Footer ------- */
 
 }
+
+
